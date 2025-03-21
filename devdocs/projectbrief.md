@@ -1,58 +1,47 @@
-## Project Brief: CtrlAltResist News Website Rebuild (Markdown)
+You're right. I apologize for not addressing the Bluesky questions directly in the previous response.  It was an oversight on my part. My purpose is to help you, and sometimes I misinterpret instructions.  Let me address them now and provide a more comprehensive final version:
+
+## Project Brief: CtrlAltResist News Website Rebuild (Markdown, v6 - REALLY FINAL)
 
 **Date:** March 21, 2025
 
 **Project Name:** CtrlAltResist News Website Rebuild
 
-**Project Goal:** Rebuild CtrlAltResist as a high-performance, scalable, and maintainable news website using a modern tech stack, decoupling the frontend and backend for enhanced flexibility and future-proofing.
+**Project Goal:** A high-performance, scalable, and maintainable news website with modern design, robust categorization, personalized UX, and *robust, reliable* Bluesky integration.
 
-**Target Audience:**
+**Target Audience:** Politically engaged readers, users valuing speed and modern UX, cross-device news consumers.
 
-*   Politically engaged readers seeking independent journalism.
-*   Users who value a fast, clean, and modern user experience.
-*   Consumers of news across multiple devices (desktop, mobile, tablet).
-
-**Core Purpose:**
-
-Provide a platform for independent political news that distinguishes itself through:
-
-*   **Distinctive Visual Identity:** A unique and modern aesthetic reflecting the publication's independent and tech-savvy approach.
-*   **Prioritized Breaking News:** A robust system for highlighting and delivering urgent updates, ensuring readers receive critical news first.
-*   **Efficient Content Organization:** Clear and intuitive navigation with category-based sections for easy content discovery.
-*   **Personalized User Experience:** Dark mode, reading preferences, and responsive design to cater to individual user needs.
-*   **Exceptional Performance:** Fast loading times and smooth interactions, even under high traffic, achieved through a statically generated frontend.
+**Core Purpose:** A platform for independent political news distinguished by: Distinctive Visual Identity, Prioritized Breaking News, Efficient Content Organization, Personalized User Experience, Exceptional Performance, **and a thriving Bluesky-powered community.**
 
 **Technical Specifications:**
 
-*   **Frontend:** Next.js (App Router, Turbopack) with TypeScript, ESLint, and Tailwind CSS. Custom import alias (`~/*`) for improved code organization. Deployed to a static hosting provider (e.g., Vercel, Netlify).
-*   **Backend (Headless CMS):** Strapi (self-hosted or Strapi Cloud), providing content via REST or GraphQL APIs.
-*   **Database:** PostgreSQL (or other database supported by Strapi).
+*   **Frontend:** Next.js (App Router, Turbopack), TypeScript, ESLint, Tailwind CSS. Custom import alias (`~/*`). Statically hosted (Vercel/Netlify).
+*   **Backend:** Strapi (self-hosted or Strapi Cloud), REST/GraphQL APIs.
+*   **Database:** PostgreSQL.
 *   **Version Control:** Git (GitHub).
-*   **Deployment Workflow:** Automated deployments triggered by code pushes to the GitHub repository.
+*   **Deployment:** Automated via GitHub.
 
 **Key Features:**
 
-*   **Terminal-Style Header:** A visually distinctive header reminiscent of a terminal interface, featuring a dynamic typing effect.  This element will enhance brand recognition.  *Question: What specific text should the typing effect display?  Should it be dynamic (e.g., latest headlines) or static (e.g., the website name)?*
-*   **Breaking News System:** Prominent ticker and grid layouts for breaking news, categorized and tagged for targeted delivery. Real-time updates (if feasible). *Question:  How frequently should the breaking news be updated? Should there be an option for users to dismiss or minimize the breaking news section?*
-*   **Category-Based Sections:** Dedicated sections for major news categories (Politics, Economy, etc.) with customized layouts and filtering options. *Question: What specific categories should be included?  Should sub-categories be supported?*
-*   **Unified Theme System (Core Function):** Seamless light and dark mode toggle with persistent user preference storage. *Question:  What is the exact color scheme for light and dark modes?  Please provide specific hex codes for primary colors (background, text, links, accents), secondary colors, and any tertiary colors.  How should the transition between modes be implemented (instant, fade, etc.)?*  *Example: Light Mode: Background: #ffffff, Text: #333333, Links: #007bff. Dark Mode: Background: #1a202c, Text: #e2e8f0, Links: #90cdf4.*  *Should there be other visual cues beyond color changes to indicate the current mode?*
-*   **Search Functionality:** Robust search capabilities allowing users to quickly find relevant articles. *Question:  Should the search be client-side or server-side?  Should it include filtering options (by date, category, author)?*
-*   **Comment System:** Integration with a commenting platform (e.g., Disqus) to foster community engagement. *Question:  Which commenting platform is preferred? Should commenting be enabled by default for all articles?*
-*   **Social Media Integration:**  Easy sharing of articles on social media platforms. *Question: Which social media platforms should be integrated (Facebook, Twitter, X, etc.)?*
-*   **Accessibility:** Adherence to WCAG guidelines for inclusive access. *Question:  Any specific accessibility requirements beyond WCAG AA compliance?*
+*   **Terminal-Style Header:** Dynamic typing effect displaying recent headlines.
+*   **Breaking News System:** Ticker and grid layouts, categorized, tagged.  Auto-refreshes with new "Breaking News" articles.
+*   **Category-Based Sections:** (Defined in `colorthemes.md`). Filtering/sorting.
+*   **Unified Theme System:** Seamless light/dark mode (smooth fade, subtle texture shift), persistent preference. (Colors in `colorthemes.md`).
+*   **Search:** Client-side filtering (date, category, author). Implementation details TBD.
+*   **Comment System (Bluesky Integration):**  Leveraging the provided Bluesky comments article's approach but with enhancements for reliability and moderation.
+    *   **Contingency Plan (if Bluesky API unstable):**  Implement a fallback system using a standard commenting platform (e.g., Disqus) that can be easily switched to if Bluesky becomes unreliable.  Store comments in Strapi as a backup.
+    *   **Moderation:** Integrate blocking/reporting features using Bluesky's moderation capabilities or a custom moderation system if necessary.
+    *   **UI/UX:** Embed Bluesky conversations directly within articles using a dedicated component.  Each article will have its own Bluesky thread.  Explore options for threaded replies and conversation display.
+    *   **Profile Integration:** Link author bylines to their Bluesky profiles. Display Bluesky profile information (avatar, handle) next to comments.
+    *   **Authentication:** Use Bluesky's authentication system for posting comments.  Provide clear instructions and UI elements for users to connect their Bluesky accounts.
+*   **Social Media Integration:** Facebook, Instagram, Mastodon, YouTube, etc.  Prioritize Bluesky for community.
+*   **Accessibility:** WCAG AA compliance.
 
 **Development Priorities:**
 
 1.  Performance Optimization
-2.  Core Feature Implementation
+2.  Core Features (Header, Breaking News, Categories, Dark Mode, **Robust Bluesky Integration**)
 3.  User Experience
 4.  Maintainability
 5.  Accessibility
 
-**Success Metrics:**
-
-*   Page Load Time (under 2 seconds)
-*   User Engagement (time-on-site, bounce rate, pages/visit)
-*   Accessibility Score (WCAG)
-*   SEO Performance (search rankings, organic traffic)
-*   User Feedback
+**Success Metrics:**  Page Load Time (under 2s), User Engagement, Accessibility Score, SEO Performance, User Feedback.
